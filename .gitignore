@@ -2,10 +2,4 @@ data
 test_data
 npy_data
 venv
-output_results/01_straight_walk/video_frames
-output_results/02_straight_duck_walk/video_frames
-output_results/03_straight_crawl/video_frames
-output_results/04_zigzag_walk/video_frames
-output_results/05_straight_duck_walk/video_frames
-output_results/06_straight_crawl/video_frames
-output_results/07_straight_walk/video_frames
+output_results
