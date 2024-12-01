@@ -110,7 +110,7 @@ def visualize_registration(source, target, transformation=np.identity(4)):
 
 def main():
     # 입력 PCD 파일들이 저장된 디렉토리 경로 설정
-    input_pcd_dir = "data/01_straight_walk/pcd"  # 실제 PCD 파일들이 저장된 경로로 변경하세요
+    input_pcd_dir = "data/03_straight_crawl/pcd"
     
     # 출력 디렉토리 설정
     output_dir = "output_results"
@@ -174,7 +174,7 @@ def main():
         # Fitness가 0인 경우 처리
         if reg_icp.fitness == 0:
             print(f"Warning: Fitness is 0 at frame {i}. Skipping this frame.")
-            continue  # 또는 적절한 조치를 취합니다.
+            continue
         
         # 소스 포인트 클라우드에 정합 변환 적용
         source_pcd.transform(reg_icp.transformation)
@@ -248,7 +248,7 @@ def main():
     print(f"비디오가 성공적으로 생성되었습니다: {video_path}")
     
     # 최종 포인트 클라우드 시각화
-    visualize_registration(combined_pcd, reference_pcd, np.identity(4))
+    # visualize_registration(combined_pcd, reference_pcd, np.identity(4))
 
 if __name__ == "__main__":
     main()
